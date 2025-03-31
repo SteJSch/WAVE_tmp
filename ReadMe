@@ -1,0 +1,39 @@
+To compile WAVE use from this directory
+
+make_wave.py
+
+E.g.
+
+Linux:
+python3 python/make_wave.py
+
+Windows:
+python3 python\make_wave.py
+
+If some files have changed the script should compile everything needed.
+
+If bin/wave.exe is missing, everything is compiled.
+
+To compile all source files in a directory, delete the corresponding
+library in the lib directory before running the Python script.
+
+The default compiler is gfortran. The compile command and options can
+be overwritten according to the file 
+
+config_fortran.py 
+
+in the python directory.
+
+Example: Replace the leading "#" to activate the variable, replace "-O2"
+by "-g" to compile with debug options.
+
+Test installation:
+
+Linux:
+cd stage
+../bin/wave.exe
+
+Windows (PowerShell or CMD.exe):
+cd stage
+..\bin\wave.exe
+
